@@ -3,8 +3,7 @@
 #define C 4
 #define D 5
  
-#define NUMBER_OF_STEPS_PER_REV_FUllSTEPPING 2048
-#define NUMBER_OF_STEPS_PER_REV_HALFSTEPPING 4096
+#define NUMBER_OF_STEPS_PER_REV_FUllSTEPPING 2038
   // b = arctan(a/b)
   // b = arctan(420/1)
   //   
@@ -16,6 +15,10 @@
   //  /   y|y = gamma = 90deg
   // +-----+
   //  B=1 
+
+
+  int number_of_steps_per_rev_fullstepping = 2048;
+  int number_of_steps_per_rev_halfstepping = number_of_steps_per_rev_fullstepping * 2;
   
   int distance_hinge_to_camera_millimeter = 234;
   int distance_screw_traveling_in_one_revolution_millimeter = 1;
@@ -31,17 +34,19 @@
 
   double revolutions_per_minute_to_match_sidereal_period = degrees_earth_rotation_per_minute / degrees_hinge_per_screw_revolution;
 
-  double steps_per_minute_to_match_sidereal_period = revolutions_per_minute_to_match_sidereal_period * NUMBER_OF_STEPS_PER_REV_HALFSTEPPING;
+  double steps_per_minute_to_match_sidereal_period = revolutions_per_minute_to_match_sidereal_period * number_of_steps_per_rev_halfstepping;
 
-  double microseconds_per_step = (60*1000*1000) / steps_per_minute_to_match_sidereal_period;
+  //double microseconds_per_step = (60*1000*1000) / steps_per_minute_to_match_sidereal_period;
 
-  int substeps_per_step = 8;
+//  int substeps_per_step = 8;
+//  
+//  double microseconds_per_substep = microseconds_per_step / substeps_per_step;
   
-  double microseconds_per_substep = microseconds_per_step / substeps_per_step;
-  
+  unsigned long microseconds_per_minute = 10L*1000L*1000L;
+
+  double microseconds_between_step_to_match_one_revolution_per_minute_when_fullstepping = microseconds_per_minute / number_of_steps_per_rev_fullstepping;
+
 void setup(){
-
-
 
   pinMode(A,OUTPUT);
   pinMode(B,OUTPUT);
@@ -57,7 +62,7 @@ void write_stepper_pins(int a,int b,int c,int d){
   digitalWrite(D,d);
 }
 
-void onestep(){
+void halfstepping(float microseconds_per_substep){
   write_stepper_pins(1,0,0,0);
   delayMicroseconds(microseconds_per_substep);
   write_stepper_pins(1,1,0,0);//halfstepping
@@ -76,12 +81,33 @@ void onestep(){
   delayMicroseconds(microseconds_per_substep);
 }
 
-void loop(){
+void fullstepping(float microseconds_per_fullstep, int direction_forward){
 
-    int i;
-    i=0;
-    while(i<NUMBER_OF_STEPS_PER_REV_HALFSTEPPING){
-      onestep();
-      i++;
+  if(direction_forward){
+    write_stepper_pins(1,0,0,0);
+    delayMicroseconds(microseconds_per_fullstep);
+    write_stepper_pins(0,1,0,0);
+    delayMicroseconds(microseconds_per_fullstep);
+    write_stepper_pins(0,0,1,0);
+    delayMicroseconds(microseconds_per_fullstep);
+    write_stepper_pins(0,0,0,1);
+    delayMicroseconds(microseconds_per_fullstep);    
+  }else{
+    write_stepper_pins(0,0,0,1);
+    delayMicroseconds(microseconds_per_fullstep);    
+    write_stepper_pins(0,0,1,0);
+    delayMicroseconds(microseconds_per_fullstep);
+    write_stepper_pins(0,1,0,0);
+    delayMicroseconds(microseconds_per_fullstep);
+    write_stepper_pins(1,0,0,0);
+    delayMicroseconds(microseconds_per_fullstep);
+  }
+    
+
+}
+
+void loop(){
+    while(1){
+      fullstepping(microseconds_between_step_to_match_one_revolution_per_minute_when_fullstepping);
     }
 }
