@@ -54,17 +54,20 @@ long n_stepper_pin_modulo = 0;
 
 int n_steps_for_full_resolution = 2048;
 
-// float n_seconds_per_revolution = 10.0;
 float n_seconds_per_revolution = n_seconds_per_revolution_to_match_sidereal_period;
 
 int n_minimum_millisecond_delay_between_steps = 2;
 
 // 10sec * 1000ms = 10000ms / 2048steps = 4.88...
 int n_calculated_delay_microseconds_for_seconds_per_revolution = ((float) n_seconds_per_revolution*(1000) / n_steps_for_full_resolution)*1000; 
-int b_backwards = 0; // direction
- 
+int b_backwards = 1; // direction
+
+
+
 void loop()
 {
+
+
     // one loop counts as one step!!
     n_time++;  
     n_stepper_pin_modulo = abs((3*b_backwards)-(n_time % n_max_stepper_pins));
@@ -77,6 +80,7 @@ void loop()
     if(n_time >= (__LONG_MAX__)){
         n_time = 0; 
     }
-    delayMicroseconds(n_calculated_delay_microseconds_for_seconds_per_revolution);
+    // delayMicroseconds(n_calculated_delay_microseconds_for_seconds_per_revolution);
+    delayMicroseconds(3000); // tmp winding back up 
 
 }
