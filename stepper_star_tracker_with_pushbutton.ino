@@ -10,6 +10,21 @@
     #define NUMBER_OF_STEPS_PER_REV_FUllSTEPPING 2038 // ive seen both 2048 and 2038
     // #define N_TAU M_PI*2
 
+
+    void f_append_string_to_array(
+        char ** a_s_string, 
+        char * s_string,
+        int * n_length_a_s_string, 
+        int n_length_max_s_string
+    ){
+
+        *n_length_a_s_string = *n_length_a_s_string+1;
+        a_s_string = (char**)realloc(a_s_string, *n_length_a_s_string * sizeof(char*));
+        a_s_string[*n_length_a_s_string-1] = (char*)malloc(n_length_max_s_string * sizeof(char));
+        strcpy(a_s_string[*n_length_a_s_string-1], s_string);
+
+
+    }
     // b = arctan(a/b)
     // b = arctan(484/1)
     //   
@@ -107,41 +122,24 @@
 
     char * s_lcd_row_1_last = "";
     char * s_lcd_row_2_last = "";
-    const int n_length_menu_options = 7; // adjust everytime you add an option 
-    const int n_length_max_menu_option_name = 16; 
 
-    char * s_menu_option_name_backlight                 =  "lcd backlight:"; 
-    char * s_menu_option_name_distance_hinge            =  "distance hinge:";
-    char * s_menu_option_name_motor_calculated_delay_microseconds       =  "mtrclcdlymicrs:"; //motor calculated delay microseconds
-    char * s_menu_option_name_delay_microseconds        =  "delay microsec:";
-    char * s_menu_option_name_direciton_motor           =  "direction motor:";
-    char * s_menu_option_name_potentiometer             =  "potentiometer:";
-    char * s_menu_option_name_delta_microseconds        =  "delta microsec:";
 
-    char a_s_menu_option_name[n_length_menu_options][n_length_max_menu_option_name];
+
 
     unsigned long n_ts_microseconds = 0;
+    unsigned long n_ts_microseconds_programmstart = micros();
     unsigned long n_ts_microseconds_last = 0;
     int n_delta_ts_microseconds = 0;
   
     int b_menu_active = 0;
     int b_menu_active_last = 0;
     int b_b_menu_active_toggled = 0; 
-    void f_prepare_menu_options(){
 
-        s_menu_option_name_backlight = strcpy(a_s_menu_option_name[0], s_menu_option_name_backlight);
-        s_menu_option_name_distance_hinge = strcpy(a_s_menu_option_name[1], s_menu_option_name_distance_hinge);
-        s_menu_option_name_motor_calculated_delay_microseconds = strcpy(a_s_menu_option_name[2], s_menu_option_name_motor_calculated_delay_microseconds);
-        s_menu_option_name_delay_microseconds = strcpy(a_s_menu_option_name[3], s_menu_option_name_delay_microseconds);
-        s_menu_option_name_direciton_motor = strcpy(a_s_menu_option_name[4], s_menu_option_name_direciton_motor);
-        s_menu_option_name_potentiometer = strcpy(a_s_menu_option_name[5], s_menu_option_name_potentiometer);
-        s_menu_option_name_delta_microseconds = strcpy(a_s_menu_option_name[6], s_menu_option_name_delta_microseconds);
-    }
     
     int n_index_menu_option = 0;
     
     void f_update_lcd_rows(){
-        
+
         if(
             strcmp(s_lcd_row_1, s_lcd_row_1_last) != 0 
             ||
@@ -149,20 +147,95 @@
         ){
             o_lcd.clear();
             o_lcd.setCursor(0, 0); 
+            // int n_rand  = rand() % 10;
+            // s_lcd_row_1[5] = (char) (65 + n_rand);
             o_lcd.print(s_lcd_row_1);
             o_lcd.setCursor(0, 1); 
             o_lcd.print(s_lcd_row_2);
 
-            strcpy(s_lcd_row_1_last, s_lcd_row_1);
-            strcpy(s_lcd_row_2_last, s_lcd_row_2);
+            s_lcd_row_1_last = strcpy(s_lcd_row_1_last, s_lcd_row_1);
+            s_lcd_row_2_last = strcpy(s_lcd_row_2_last, s_lcd_row_2);
+            
         }
         
     }
 
+
+    int n_length_menu_options = 0;
+    const int n_length_max_menu_option_name = 16; 
+    char ** a_s_menu_option_name = (char**)malloc(1);
+
+    char * s_menu_option_name_backlight     =  "lcd backlight:"; 
+    char * s_menu_option_name_distance_hinge                =  "distance hinge:";
+    char * s_menu_option_name_motor_calculated_delay_microseconds           =  "mtrclcdlymicrs:";
+    char * s_menu_option_name_delay_microseconds            =  "delay microsec:";
+    char * s_menu_option_name_direciton_motor               =  "direction motor:";
+    char * s_menu_option_name_potentiometer                 =  "potentiometer:";
+    char * s_menu_option_name_delta_microseconds            =  "delta microsec:";
+    char * s_menu_option_name_time_running            =  "time runing(s):";
+
+    // in the end it is easier to just have string literals and compare with string literals
+    char a_s_menu_option_name_literal[][n_length_max_menu_option_name+1] = {
+        "lcd backlight:", 
+        "distance hinge:",
+        "mtrclcdlymicrs:",
+        "delay microsec:",
+        "direction motor:",
+        "potentiometer:",
+        "delta microsec:",
+        "time runing(s):"
+    };
+    int n_length_a_s_menu_option_name_literal = sizeof(a_s_menu_option_name_literal)/ n_length_max_menu_option_name+1;
+
+    void f_add_menu_option(
+        char * s_menu_option
+    ){
+        f_append_string_to_array(
+            a_s_menu_option_name, 
+            s_menu_option, 
+            &n_length_menu_options,
+            n_length_max_menu_option_name
+        );
+    }
+    void f_prepare_menu_options(){
+        f_add_menu_option(
+            s_menu_option_name_backlight
+        );
+        f_add_menu_option(
+            s_menu_option_name_distance_hinge
+        );
+        f_add_menu_option(
+            s_menu_option_name_motor_calculated_delay_microseconds
+        ); //motor calculated delay microseconds
+        f_add_menu_option(
+            s_menu_option_name_delay_microseconds
+        );
+        f_add_menu_option(
+            s_menu_option_name_direciton_motor
+        );
+        f_add_menu_option(
+            s_menu_option_name_potentiometer
+        );
+        f_add_menu_option(
+            s_menu_option_name_delta_microseconds
+        );
+        f_add_menu_option(
+            s_menu_option_name_time_running
+        );
+
+        // for(int n_i = 0; n_i < n_length_menu_options; n_i++){
+        //     char * s_tmp; 
+        //     sprintf(s_tmp, "a_s_menu_option_name[%i]:%s\n", n_i, a_s_menu_option_name[n_i]);
+        //     Serial.println(s_tmp);
+        // }
+            
+    }
     void setup()
     {
-        f_prepare_menu_options();
+        Serial.begin(9600);
 
+        // f_prepare_menu_options();
+        
         pinMode(n_lcd_backlight_pin, OUTPUT);
         pinMode(n_pin_potentiometer, INPUT);
 
@@ -181,7 +254,7 @@
             n_i++; 
         }
 
-        Serial.begin(9600);
+
 
     }
     long n_time = 0; 
@@ -220,8 +293,9 @@
         // if(n_analog_read_value_button && n_analog_read_value_button_last == 0){
         //     b_click = 1;
         // }
+
+
         if(b_read_value_button_digital && b_read_value_button_digital_last == 1){
-                        o_lcd.clear();
 
             int n_delta_milliseconds_button_down = millis() - n_b_click_ts_milliseconds; 
 
@@ -256,11 +330,13 @@
         if(b_menu_active){
 
             if(b_click){
-                n_index_menu_option = ((n_index_menu_option +1) % n_length_menu_options);
-                s_lcd_row_1 = a_s_menu_option_name[n_index_menu_option];
+                // n_index_menu_option = ((n_index_menu_option +1) % n_length_menu_options);
+                n_index_menu_option = (n_index_menu_option+1)%n_length_a_s_menu_option_name_literal;
+                s_lcd_row_1 = a_s_menu_option_name_literal[n_index_menu_option];
             }
 
-            if(a_s_menu_option_name[n_index_menu_option] == s_menu_option_name_backlight){
+         
+            if(strcmp(a_s_menu_option_name[n_index_menu_option],"lcd backlight:") == 0){
                 int n_value_lcd_backlight; 
                 if(n_value_potentiometer != n_value_potentiometer_last){
                     n_value_lcd_backlight = (int) (n_value_potentiometer_normalized * 255);
@@ -269,11 +345,17 @@
                 sprintf(s_lcd_row_2, "value:%i", n_value_lcd_backlight); 
             }
 
-            if(a_s_menu_option_name[n_index_menu_option] == s_menu_option_name_potentiometer){
+            if(strcmp(
+                a_s_menu_option_name[n_index_menu_option],"potentiometer:"
+            )== 0){
                 sprintf(s_lcd_row_2, "value:%i", n_value_potentiometer); 
             }
             
-            if(a_s_menu_option_name[n_index_menu_option] == s_menu_option_name_direciton_motor){
+            if(
+                strcmp(
+                    a_s_menu_option_name[n_index_menu_option],"direction motor:"
+                )== 0
+            ){
                 //direction via delta , can be very buggy if potentiometer is not soldered
                 // if(n_value_potentiometer > n_value_potentiometer_last){
                 //     b_direction = 1;
@@ -287,24 +369,49 @@
                 
                 sprintf(s_lcd_row_2, "value:%i", b_direction); 
             }
-            if(a_s_menu_option_name[n_index_menu_option] == s_menu_option_name_delay_microseconds){
+            if(
+                strcmp(
+                    a_s_menu_option_name[n_index_menu_option],"delay microsec:"
+                )== 0
+            ){
                 sprintf(s_lcd_row_2, "value:%i", n_delay_microseconds); 
             }
 
-            if(a_s_menu_option_name[n_index_menu_option] == s_menu_option_name_delta_microseconds){
+            if(
+                strcmp(
+                    a_s_menu_option_name[n_index_menu_option],"delta microsec:"
+                )== 0
+            ){
                 sprintf(s_lcd_row_2, "value:%i", n_delta_ts_microseconds); 
             }
 
-            if(a_s_menu_option_name[n_index_menu_option] == s_menu_option_name_distance_hinge){
+            if(
+                strcmp(
+                    a_s_menu_option_name[n_index_menu_option],"delay microsec:"
+                )== 0
+            ){
                 if(n_value_potentiometer != n_value_potentiometer_last){
                     n_distance_hinge_to_screw_millimeter = ((n_value_potentiometer_normalized -0.5) *200)+ 484;
                 }
                 sprintf(s_lcd_row_2, "value:%i", n_distance_hinge_to_screw_millimeter); 
             }
-            if(a_s_menu_option_name[n_index_menu_option] == s_menu_option_name_motor_calculated_delay_microseconds){
+            if(
+                strcmp(
+                    a_s_menu_option_name[n_index_menu_option],"mtrclcdlymicrs:"
+                )== 0
+            ){
                 
                 sprintf(s_lcd_row_2, "value:%i", n_calculated_motor_delay_microseconds); 
             }
+            if(
+                strcmp(
+                    a_s_menu_option_name[n_index_menu_option],"time runing(s):"
+                )== 0
+            ){
+                sprintf(s_lcd_row_2, "value:%d", ((n_ts_microseconds_programmstart - n_ts_microseconds) /1000.0*1000.0)); 
+            }
+
+            
 
             f_update_lcd_rows();
 
