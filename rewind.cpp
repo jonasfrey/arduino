@@ -24,7 +24,7 @@
     // +-----+
     //  B=1 (distance screw traveling in one millimeter) 
 
-    int f_calc_n_motor_delay_microseconds(
+    double f_calc_n_motor_delay_microseconds(
         int n_distance_hinge_to_screw_millimeter, 
         int n_distance_screw_traveling_in_one_revolution_millimeter
     ){
@@ -44,7 +44,8 @@
 
         double n_seconds_per_revolution_to_match_sidereal_period = (double)1.0/n_revolutions_per_second_to_match_sidereal_period;
 
-        int n_steps_for_full_revolution = 2048;
+        // int n_steps_for_full_revolution = 2048;
+        int n_steps_for_full_revolution = 2038;
         // int n_steps_for_full_revolution = 2038; //i have seen both, 2048 and 2038, after testing 2038 is better, might have to do with wrong n_distance_hinge_to_screw_millimeter
 
         double n_seconds_per_revolution = n_seconds_per_revolution_to_match_sidereal_period;// around 28
@@ -53,53 +54,54 @@
         int n_minimum_millisecond_delay_between_steps = 2;
 
         // 10sec * 1000ms = 10000ms / 2048steps = 4.88...
-        int n_calculated_delay_microseconds_for_seconds_per_revolution = n_microseconds_per_revolution / n_steps_for_full_revolution;
+        double n_calculated_delay_microseconds_for_seconds_per_revolution = (double) n_microseconds_per_revolution / (double) n_steps_for_full_revolution;
     
         Serial.println("n_distance_screw_traveling_in_one_revolution_millimeter");
-        Serial.println(n_distance_screw_traveling_in_one_revolution_millimeter);
+        Serial.println(n_distance_screw_traveling_in_one_revolution_millimeter,10);
         Serial.println("---\n");
 
         Serial.println("n_distance_hinge_to_screw_millimeter");
-        Serial.println(n_distance_hinge_to_screw_millimeter);
+        Serial.println(n_distance_hinge_to_screw_millimeter,10);
         Serial.println("---\n");
 
         Serial.println("n_radians_hinge_per_screw_revolution");
-        Serial.println(n_radians_hinge_per_screw_revolution);
+        Serial.println(n_radians_hinge_per_screw_revolution,10);
         Serial.println("---\n");
 
         Serial.println("n_degrees_earth_rotation_per_second");
-        Serial.println(n_degrees_earth_rotation_per_second);
+        Serial.println(n_degrees_earth_rotation_per_second,10);
         Serial.println("---\n");
 
         Serial.println("n_revolutions_per_second_to_match_sidereal_period");
-        Serial.println(n_revolutions_per_second_to_match_sidereal_period);
+        Serial.println(n_revolutions_per_second_to_match_sidereal_period,10);
         Serial.println("---\n");
 
         Serial.println("n_seconds_per_revolution_to_match_sidereal_period");
-        Serial.println(n_seconds_per_revolution_to_match_sidereal_period);
+        Serial.println(n_seconds_per_revolution_to_match_sidereal_period,10);
         Serial.println("---\n");
 
         Serial.println("n_steps_for_full_revolution");
-        Serial.println(n_steps_for_full_revolution);
+        Serial.println(n_steps_for_full_revolution,10);
         Serial.println("---\n");
 
         Serial.println("n_seconds_per_revolution");
-        Serial.println(n_seconds_per_revolution);
+        Serial.println(n_seconds_per_revolution,10);
         Serial.println("---\n");
 
         Serial.println("n_microseconds_per_revolution");
-        Serial.println(n_microseconds_per_revolution);  
+        Serial.println(n_microseconds_per_revolution,10);  
         Serial.println("---\n");
 
         Serial.println("n_calculated_delay_microseconds_for_seconds_per_revolution");
-        Serial.println(n_calculated_delay_microseconds_for_seconds_per_revolution);          
+        Serial.println(n_calculated_delay_microseconds_for_seconds_per_revolution,10);          
         Serial.println("---\n");
 
         return n_calculated_delay_microseconds_for_seconds_per_revolution;
 
     }
 
-    int n_distance_hinge_to_screw_millimeter = 471; // 23:35
+    int n_distance_hinge_to_screw_millimeter =3484; 
+    // int n_distance_hinge_to_screw_millimeter = 2000; // 2/3:35?
     int n_distance_screw_traveling_in_one_revolution_millimeter = 1;
     
 
@@ -157,7 +159,7 @@
         Serial.begin(9600);
 
         
-        n_calculated_motor_delay_microseconds = f_calc_n_motor_delay_microseconds(
+        n_calculated_motor_delay_microseconds = (int) f_calc_n_motor_delay_microseconds(
             n_distance_hinge_to_screw_millimeter, 
             n_distance_screw_traveling_in_one_revolution_millimeter
         ); 
@@ -194,15 +196,13 @@
     float n_value_potentiometer_normalized_last = 0.0;
     int n_value_potentiometer_max = 1024;
     int n_delay_microseconds = 0; 
-
+    int n_microseconds_arduino_void_loop = 7;
     void loop()
     {   
-        n_ts_microseconds = micros();
 
-        b_backwards = 1;
         
         n_time++;  
-        n_stepper_pin_modulo = abs((3*b_backwards)-(n_time % n_max_stepper_pins));
+        n_stepper_pin_modulo = (n_time % n_max_stepper_pins);
         int n_i = 0; 
 
         while(n_i < 4){
@@ -210,16 +210,9 @@
             n_i++;
         }
         
-        if(n_time >= (__LONG_MAX__)){
-            n_time = 0; 
-        }
 
-        n_delta_ts_microseconds = abs(n_ts_microseconds - n_ts_microseconds_last);
-
-        int n_safety = 0;
-        delayMicroseconds(n_calculated_motor_delay_microseconds-n_delta_ts_microseconds+n_safety);
+        delayMicroseconds(n_calculated_motor_delay_microseconds-n_microseconds_arduino_void_loop);
         
-        n_ts_microseconds_last = n_ts_microseconds;
 
     }
 
