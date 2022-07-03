@@ -11,7 +11,7 @@
 
 
     // double n_radius_millimeter = 483; 
-    double n_radius_millimeter = 483; 
+    double n_radius_millimeter = 461; 
     double n_degrees_earth_rotation_per_second = 0.004158533;// (double) n_degrees_max/(double)((23*60*60)+(56*60)+(4.09053)); //0,004158533 //wwwwttttfff why the fuck doesnt this work 
     double n_millimeter_circle_circumfence = n_radius_millimeter * 2.0 * M_PI;
     double n_sec_per_sidereal_day = 86164.0905; 
