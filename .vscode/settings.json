@@ -1,3 +1,6 @@
 {
-    "arduino.path": "/snap/bin"
+    "arduino.path": "/snap/bin",
+    "files.associations": {
+        "random": "cpp"
+    }
 }
