@@ -15,6 +15,9 @@
     // ![](./28BYJ48-Stepper-Motor-Gear-Ratio-Explanation.png)
 
 
+unsigned long f_n_ts_mics(){
+  return micros();
+}
 
 #define n_pin_ain_potentiometer_x  A0 // Arduino pin connected to VRX pin
 #define n_pin_ain_potentiometer_y  A1 // Arduino pin connected to VRY pin
@@ -152,6 +155,14 @@
         o_byj48_stepper->n_microseconds_delay_between_step 
           = (1l*1000l*1000l) / o_byj48_stepper->n_steps_per_second;
       }
+      if(o_byj48_stepper->n_revolutions_per_second <= 0.){
+        for(int n_i = 0;n_i< o_byj48_stepper->n_len_a_n_pin; n_i+=1){
+            digitalWrite(o_byj48_stepper->a_n_pin[n_i], 0);
+        }
+      }
+        // Serial.println("speed is:");
+        // Serial.println(o_byj48_stepper->n_revolutions_per_second);
+
     }
 
 
@@ -191,7 +202,7 @@
       O_byj48_stepper * o_byj48_stepper, 
       long n_mic_secs_delay
     ){
-      o_byj48_stepper->n_t_mic_sec_stepper += n_mic_secs_delay; 
+      o_byj48_stepper->n_t_mic_sec_stepper = f_n_ts_mics(); 
       double n_t_mic_sec_diff = o_byj48_stepper->n_t_mic_sec_stepper - o_byj48_stepper->n_microseconds_delay_between_step;
       if(n_t_mic_sec_diff > 0){
         o_byj48_stepper->n_t_mic_sec_stepper = n_t_mic_sec_diff;
@@ -218,8 +229,9 @@
 
 
       for(int n_i = 0;n_i< o_byj48_stepper->n_len_a_n_pin; n_i+=1){
-            int b = n_i == o_byj48_stepper->n_idx_active_a_n_pin; 
-            digitalWrite(o_byj48_stepper->a_n_pin[n_i], b);
+          int b = n_i == o_byj48_stepper->n_idx_active_a_n_pin; 
+
+          digitalWrite(o_byj48_stepper->a_n_pin[n_i], b);
       }
     }
 
