@@ -1,0 +1,682 @@
+[    2.429130] usbcore: registered new interface driver usbfs
+[    2.429130] usbcore: registered new interface driver hub
+[    2.429130] usbcore: registered new device driver usb
+[    2.903533] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.19
+[    2.903535] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.903537] usb usb1: Product: xHCI Host Controller
+[    2.903539] usb usb1: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.903540] usb usb1: SerialNumber: 0000:06:00.3
+[    2.905692] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.905709] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.19
+[    2.905711] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.905713] usb usb2: Product: xHCI Host Controller
+[    2.905714] usb usb2: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.905715] usb usb2: SerialNumber: 0000:06:00.3
+[    2.907218] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.19
+[    2.907221] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.907223] usb usb3: Product: xHCI Host Controller
+[    2.907225] usb usb3: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.907226] usb usb3: SerialNumber: 0000:06:00.4
+[    2.907634] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.907651] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.19
+[    2.907653] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.907655] usb usb4: Product: xHCI Host Controller
+[    2.907656] usb usb4: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.907657] usb usb4: SerialNumber: 0000:06:00.4
+[    2.909623] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.19
+[    2.909624] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.909625] usb usb5: Product: xHCI Host Controller
+[    2.909625] usb usb5: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.909626] usb usb5: SerialNumber: 0000:07:00.0
+[    2.909750] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.909759] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.19
+[    2.909760] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.909761] usb usb6: Product: xHCI Host Controller
+[    2.909762] usb usb6: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.909762] usb usb6: SerialNumber: 0000:07:00.0
+[    2.911491] usb usb7: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.19
+[    2.911492] usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.911493] usb usb7: Product: xHCI Host Controller
+[    2.911494] usb usb7: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.911494] usb usb7: SerialNumber: 0000:07:00.3
+[    2.911603] usb usb8: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.911612] usb usb8: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.19
+[    2.911612] usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.911613] usb usb8: Product: xHCI Host Controller
+[    2.911614] usb usb8: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.911614] usb usb8: SerialNumber: 0000:07:00.3
+[    2.913331] usb usb9: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.19
+[    2.913332] usb usb9: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.913333] usb usb9: Product: xHCI Host Controller
+[    2.913333] usb usb9: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.913334] usb usb9: SerialNumber: 0000:07:00.4
+[    2.913445] usb usb10: We don't know the algorithms for LPM for this host, disabling LPM.
+[    2.913454] usb usb10: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.19
+[    2.913455] usb usb10: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.913456] usb usb10: Product: xHCI Host Controller
+[    2.913456] usb usb10: Manufacturer: Linux 5.19.0-40-generic xhci-hcd
+[    2.913457] usb usb10: SerialNumber: 0000:07:00.4
+[    3.171264] usb 1-4: new full-speed USB device number 2 using xhci_hcd
+[    3.171295] usb 3-2: new high-speed USB device number 2 using xhci_hcd
+[    3.174900] usb 9-1: new full-speed USB device number 2 using xhci_hcd
+[    3.178895] usb 7-1: new high-speed USB device number 2 using xhci_hcd
+[    3.331800] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[    3.331805] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.331808] usb 7-1: Product: USB2.0 Hub             
+[    3.331809] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[    3.340932] usb 3-2: New USB device found, idVendor=0bda, idProduct=5411, bcdDevice= 1.55
+[    3.340939] usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.340942] usb 3-2: Product: USB2.1 Hub
+[    3.340944] usb 3-2: Manufacturer: Generic
+[    3.348298] usb 9-1: not running at top speed; connect to a high speed hub
+[    3.367543] usb 1-4: New USB device found, idVendor=048d, idProduct=c102, bcdDevice= 8.00
+[    3.367551] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.367555] usb 1-4: Product: ITE Device(8910)
+[    3.367557] usb 1-4: Manufacturer: ITE Tech. Inc.
+[    3.368299] usb 9-1: New USB device found, idVendor=2109, idProduct=0103, bcdDevice= 6.f5
+[    3.368301] usb 9-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    3.368303] usb 9-1: Product: USB 2.0 BILLBOARD
+[    3.368304] usb 9-1: Manufacturer: VLI Inc.
+[    3.368305] usb 9-1: SerialNumber: 0000000000000001
+[    3.395999] input: ITE Tech. Inc. ITE Device(8910) Keyboard as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-4/1-4:1.0/0003:048D:C102.0002/input/input8
+[    3.455149] input: ITE Tech. Inc. ITE Device(8910) Wireless Radio Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-4/1-4:1.0/0003:048D:C102.0002/input/input9
+[    3.455439] hid-generic 0003:048D:C102.0002: input,hiddev0,hidraw1: USB HID v1.10 Keyboard [ITE Tech. Inc. ITE Device(8910)] on usb-0000:06:00.3-4/input0
+[    3.455519] usbcore: registered new interface driver usbhid
+[    3.455521] usbhid: USB HID core driver
+[    3.459523] usb 4-2: new SuperSpeed USB device number 2 using xhci_hcd
+[    3.486881] usb 8-1: new SuperSpeed USB device number 2 using xhci_hcd
+[    3.498805] usb 4-2: New USB device found, idVendor=0bda, idProduct=0411, bcdDevice= 1.55
+[    3.498813] usb 4-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.498817] usb 4-2: Product: USB3.2 Hub
+[    3.498820] usb 4-2: Manufacturer: Generic
+[    3.618923] usb 3-3: new high-speed USB device number 3 using xhci_hcd
+[    3.771394] usb 3-3: New USB device found, idVendor=0489, idProduct=e0d8, bcdDevice= 1.00
+[    3.771404] usb 3-3: New USB device strings: Mfr=5, Product=6, SerialNumber=7
+[    3.771408] usb 3-3: Product: Wireless_Device
+[    3.771411] usb 3-3: Manufacturer: MediaTek Inc.
+[    3.771413] usb 3-3: SerialNumber: 000000000
+[    3.871438] usb 9-1: USB disconnect, device number 2
+[    3.894223] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[    3.894230] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.894233] usb 8-1: Product: USB3.0 Hub             
+[    3.894235] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[    4.487287] usb 7-1.2: new high-speed USB device number 3 using xhci_hcd
+[    4.641428] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[    4.641433] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[    4.641435] usb 7-1.2: Product: Mass Storage Device
+[    4.641437] usb 7-1.2: Manufacturer: Generic
+[    4.641438] usb 7-1.2: SerialNumber: 121220160204
+[    4.669000] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[    4.669154] scsi host0: usb-storage 7-1.2:1.0
+[    4.669275] usbcore: registered new interface driver usb-storage
+[    4.673387] usbcore: registered new interface driver uas
+[    5.121337] usbcore: registered new interface driver btusb
+[    5.550920] usb 9-1: new full-speed USB device number 3 using xhci_hcd
+[    5.728256] usb 9-1: not running at top speed; connect to a high speed hub
+[    5.748257] usb 9-1: New USB device found, idVendor=2109, idProduct=0103, bcdDevice= 6.f5
+[    5.748262] usb 9-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    5.748265] usb 9-1: Product: USB 2.0 BILLBOARD
+[    5.748267] usb 9-1: Manufacturer: VLI Inc.
+[    5.748268] usb 9-1: SerialNumber: 0000000000000001
+[    6.152296] Modules linked in: amd64_edac(-) nvidia_modeset(POE) nls_iso8859_1 edac_mce_amd nvidia(POE) amdgpu(+) snd_ctl_led snd_hda_codec_realtek snd_hda_codec_generic ledtrig_audio snd_hda_codec_hdmi snd_soc_acp6x_mach snd_soc_dmic snd_acp6x_pdm_dma snd_sof_amd_renoir snd_sof_amd_acp snd_sof_pci snd_hda_intel snd_sof snd_intel_dspcfg snd_intel_sdw_acpi snd_sof_utils snd_hda_codec snd_soc_core iommu_v2 gpu_sched snd_hda_core snd_compress drm_ttm_helper ac97_bus snd_hwdep mt7921e ttm snd_pcm_dmaengine snd_pci_ps mt7921_common snd_acp_pci drm_display_helper snd_seq_midi btusb kvm_amd snd_pci_acp6x mt76_connac_lib snd_seq_midi_event btrtl snd_pcm mt76 snd_rawmidi cec joydev btbcm kvm snd_seq snd_pci_acp5x btintel input_leds crct10dif_pclmul mac_hid mac80211 btmtk snd_seq_device ghash_clmulni_intel aesni_intel rc_core snd_rn_pci_acp3x snd_timer i2c_algo_bit crypto_simd bluetooth drm_kms_helper snd_acp_config cfg80211 fb_sys_fops ideapad_laptop snd cryptd syscopyarea snd_soc_acpi ucsi_acpi
+[    6.152332]  ecdh_generic sysfillrect typec_ucsi sparse_keymap ecc rapl serio_raw hid_multitouch wmi_bmof k10temp ccp snd_pci_acp3x libarc4 sysimgblt soundcore typec platform_profile amd_pmc acpi_tad uas usb_storage msr parport_pc ppdev lp parport drm ramoops pstore_blk reed_solomon pstore_zone efi_pstore ip_tables x_tables autofs4 usbhid r8169 hid_generic nvme crc32_pclmul nvme_core xhci_pci realtek xhci_pci_renesas i2c_piix4 wmi i2c_hid_acpi video i2c_hid hid
+[    6.154437] Modules linked in: amd64_edac(-) nvidia_modeset(POE) nls_iso8859_1 edac_mce_amd nvidia(POE) amdgpu(+) snd_ctl_led snd_hda_codec_realtek snd_hda_codec_generic ledtrig_audio snd_hda_codec_hdmi snd_soc_acp6x_mach snd_soc_dmic snd_acp6x_pdm_dma snd_sof_amd_renoir snd_sof_amd_acp snd_sof_pci snd_hda_intel snd_sof snd_intel_dspcfg snd_intel_sdw_acpi snd_sof_utils snd_hda_codec snd_soc_core iommu_v2 gpu_sched snd_hda_core snd_compress drm_ttm_helper ac97_bus snd_hwdep mt7921e ttm snd_pcm_dmaengine snd_pci_ps mt7921_common snd_acp_pci drm_display_helper snd_seq_midi btusb kvm_amd snd_pci_acp6x mt76_connac_lib snd_seq_midi_event btrtl snd_pcm mt76 snd_rawmidi cec joydev btbcm kvm snd_seq snd_pci_acp5x btintel input_leds crct10dif_pclmul mac_hid mac80211 btmtk snd_seq_device ghash_clmulni_intel aesni_intel rc_core snd_rn_pci_acp3x snd_timer i2c_algo_bit crypto_simd bluetooth drm_kms_helper snd_acp_config cfg80211 fb_sys_fops ideapad_laptop snd cryptd syscopyarea snd_soc_acpi ucsi_acpi
+[    6.154466]  ecdh_generic sysfillrect typec_ucsi sparse_keymap ecc rapl serio_raw hid_multitouch wmi_bmof k10temp ccp snd_pci_acp3x libarc4 sysimgblt soundcore typec platform_profile amd_pmc acpi_tad uas usb_storage msr parport_pc ppdev lp parport drm ramoops pstore_blk reed_solomon pstore_zone efi_pstore ip_tables x_tables autofs4 usbhid r8169 hid_generic nvme crc32_pclmul nvme_core xhci_pci realtek xhci_pci_renesas i2c_piix4 wmi i2c_hid_acpi video i2c_hid hid
+[  391.079809] usb 4-2.1: new SuperSpeed USB device number 3 using xhci_hcd
+[  391.108947] usb 4-2.1: New USB device found, idVendor=05e3, idProduct=0626, bcdDevice= 6.63
+[  391.108953] usb 4-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  391.108957] usb 4-2.1: Product: USB3.1 Hub
+[  391.108958] usb 4-2.1: Manufacturer: GenesysLogic
+[  391.179617] usb 3-2.1: new high-speed USB device number 4 using xhci_hcd
+[  391.284680] usb 3-2.1: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice= 6.63
+[  391.284684] usb 3-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  391.284685] usb 3-2.1: Product: USB2.1 Hub
+[  391.284686] usb 3-2.1: Manufacturer: GenesysLogic
+[  391.432262] usb 4-2.1.4: new SuperSpeed USB device number 4 using xhci_hcd
+[  391.455140] usb 4-2.1.4: New USB device found, idVendor=05e3, idProduct=0612, bcdDevice=92.26
+[  391.455147] usb 4-2.1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  391.455150] usb 4-2.1.4: Product: USB3.1 Hub
+[  391.455152] usb 4-2.1.4: Manufacturer: GenesysLogic
+[  391.648022] usb 3-2.1.4: new high-speed USB device number 5 using xhci_hcd
+[  391.776806] usb 3-2.1.4: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=92.26
+[  391.776812] usb 3-2.1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  391.776814] usb 3-2.1.4: Product: USB2.0 Hub
+[  391.776816] usb 3-2.1.4: Manufacturer: GenesysLogic
+[  392.175993] usb 3-2.1.4.1: new full-speed USB device number 6 using xhci_hcd
+[  392.301062] usb 3-2.1.4.1: New USB device found, idVendor=1e7d, idProduct=2dd2, bcdDevice= 1.01
+[  392.301074] usb 3-2.1.4.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  392.301079] usb 3-2.1.4.1: Product: ROCCAT Kone Pure Ultra
+[  392.301082] usb 3-2.1.4.1: Manufacturer: ROCCAT
+[  392.523970] input: ROCCAT ROCCAT Kone Pure Ultra as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.0/0003:1E7D:2DD2.0003/input/input22
+[  392.524253] hid-generic 0003:1E7D:2DD2.0003: input,hidraw2: USB HID v1.11 Mouse [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input0
+[  392.528833] hid-generic 0003:1E7D:2DD2.0004: hiddev1,hidraw3: USB HID v1.11 Device [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input1
+[  392.534653] input: ROCCAT ROCCAT Kone Pure Ultra Keyboard as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.0005/input/input23
+[  392.592235] input: ROCCAT ROCCAT Kone Pure Ultra Mouse as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.0005/input/input24
+[  392.592455] input: ROCCAT ROCCAT Kone Pure Ultra as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.0005/input/input25
+[  392.592669] input: ROCCAT ROCCAT Kone Pure Ultra Wireless Radio Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.0005/input/input26
+[  392.593128] hid-generic 0003:1E7D:2DD2.0005: input,hiddev2,hidraw4: USB HID v1.11 Keyboard [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input2
+[  392.598041] hid-generic 0003:1E7D:2DD2.0006: hiddev3,hidraw5: USB HID v1.11 Device [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input3
+[  392.899462] usb 3-2.1.4.4: new full-speed USB device number 7 using xhci_hcd
+[  393.185462] usb 3-2.1.4.4: New USB device found, idVendor=046d, idProduct=0aaa, bcdDevice= 0.31
+[  393.185470] usb 3-2.1.4.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  393.185473] usb 3-2.1.4.4: Product: PRO X
+[  393.185474] usb 3-2.1.4.4: Manufacturer: Logitech
+[  393.185476] usb 3-2.1.4.4: SerialNumber: 000000000000
+[  393.518553] input: Logitech PRO X Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.4/3-2.1.4.4:1.3/0003:046D:0AAA.0007/input/input27
+[  393.576288] input: Logitech PRO X as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.4/3-2.1.4.4:1.3/0003:046D:0AAA.0007/input/input28
+[  393.576860] hid-generic 0003:046D:0AAA.0007: input,hiddev4,hidraw6: USB HID v1.11 Device [Logitech PRO X] on usb-0000:06:00.4-2.1.4.4/input3
+[  393.936051] usbcore: registered new interface driver snd-usb-audio
+[  448.572903] usb 9-1: USB disconnect, device number 3
+[  450.253722] usb 9-1: new full-speed USB device number 4 using xhci_hcd
+[  450.423339] usb 9-1: not running at top speed; connect to a high speed hub
+[  450.443341] usb 9-1: New USB device found, idVendor=2109, idProduct=0103, bcdDevice= 6.f5
+[  450.443351] usb 9-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  450.443356] usb 9-1: Product: USB 2.0 BILLBOARD
+[  450.443358] usb 9-1: Manufacturer: VLI Inc.
+[  450.443361] usb 9-1: SerialNumber: 0000000000000001
+[  462.312359] usb 3-2.1.4: USB disconnect, device number 5
+[  462.312370] usb 3-2.1.4.1: USB disconnect, device number 6
+[  462.536679] usb 4-2.1.4: USB disconnect, device number 4
+[  462.693536] usb 3-2.1.4.4: USB disconnect, device number 7
+[  463.168897] usb 3-2.1.4: new high-speed USB device number 8 using xhci_hcd
+[  463.301477] usb 3-2.1.4: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=92.26
+[  463.301489] usb 3-2.1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  463.301493] usb 3-2.1.4: Product: USB2.0 Hub
+[  463.301496] usb 3-2.1.4: Manufacturer: GenesysLogic
+[  463.397799] usb 4-2.1.4: new SuperSpeed USB device number 5 using xhci_hcd
+[  463.423313] usb 4-2.1.4: New USB device found, idVendor=05e3, idProduct=0612, bcdDevice=92.26
+[  463.423324] usb 4-2.1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  463.423328] usb 4-2.1.4: Product: USB3.1 Hub
+[  463.423330] usb 4-2.1.4: Manufacturer: GenesysLogic
+[  463.740367] usb 3-2.1.4.1: new full-speed USB device number 9 using xhci_hcd
+[  463.857842] usb 3-2.1.4.1: New USB device found, idVendor=1e7d, idProduct=2dd2, bcdDevice= 1.01
+[  463.857855] usb 3-2.1.4.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  463.857860] usb 3-2.1.4.1: Product: ROCCAT Kone Pure Ultra
+[  463.857862] usb 3-2.1.4.1: Manufacturer: ROCCAT
+[  464.076284] input: ROCCAT ROCCAT Kone Pure Ultra as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.0/0003:1E7D:2DD2.0008/input/input31
+[  464.076867] hid-generic 0003:1E7D:2DD2.0008: input,hidraw2: USB HID v1.11 Mouse [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input0
+[  464.081395] hid-generic 0003:1E7D:2DD2.0009: hiddev1,hidraw3: USB HID v1.11 Device [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input1
+[  464.085781] input: ROCCAT ROCCAT Kone Pure Ultra Keyboard as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000A/input/input32
+[  464.145043] input: ROCCAT ROCCAT Kone Pure Ultra Mouse as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000A/input/input33
+[  464.145373] input: ROCCAT ROCCAT Kone Pure Ultra as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000A/input/input34
+[  464.145544] input: ROCCAT ROCCAT Kone Pure Ultra Wireless Radio Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000A/input/input35
+[  464.145963] hid-generic 0003:1E7D:2DD2.000A: input,hiddev2,hidraw4: USB HID v1.11 Keyboard [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input2
+[  464.150793] hid-generic 0003:1E7D:2DD2.000B: hiddev3,hidraw5: USB HID v1.11 Device [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input3
+[  464.361210] usb 3-2.1: USB disconnect, device number 4
+[  464.361216] usb 3-2.1.4: USB disconnect, device number 8
+[  464.361218] usb 3-2.1.4.1: USB disconnect, device number 9
+[  464.473204] usb 4-2.1: USB disconnect, device number 3
+[  464.473210] usb 4-2.1.4: USB disconnect, device number 5
+[  465.088795] usb 4-2.1: new SuperSpeed USB device number 6 using xhci_hcd
+[  465.123110] usb 4-2.1: New USB device found, idVendor=05e3, idProduct=0626, bcdDevice= 6.63
+[  465.123121] usb 4-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  465.123125] usb 4-2.1: Product: USB3.1 Hub
+[  465.123127] usb 4-2.1: Manufacturer: GenesysLogic
+[  465.192497] usb 3-2.1: new high-speed USB device number 10 using xhci_hcd
+[  465.297729] usb 3-2.1: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice= 6.63
+[  465.297736] usb 3-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  465.297738] usb 3-2.1: Product: USB2.1 Hub
+[  465.297740] usb 3-2.1: Manufacturer: GenesysLogic
+[  465.437958] usb 4-2.1.4: new SuperSpeed USB device number 7 using xhci_hcd
+[  465.459011] usb 4-2.1.4: New USB device found, idVendor=05e3, idProduct=0612, bcdDevice=92.26
+[  465.459015] usb 4-2.1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  465.459017] usb 4-2.1.4: Product: USB3.1 Hub
+[  465.459017] usb 4-2.1.4: Manufacturer: GenesysLogic
+[  465.668554] usb 3-2.1.4: new high-speed USB device number 11 using xhci_hcd
+[  465.801229] usb 3-2.1.4: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=92.26
+[  465.801236] usb 3-2.1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  465.801239] usb 3-2.1.4: Product: USB2.0 Hub
+[  465.801241] usb 3-2.1.4: Manufacturer: GenesysLogic
+[  466.220122] usb 3-2.1.4.1: new full-speed USB device number 12 using xhci_hcd
+[  466.337678] usb 3-2.1.4.1: New USB device found, idVendor=1e7d, idProduct=2dd2, bcdDevice= 1.01
+[  466.337688] usb 3-2.1.4.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  466.337692] usb 3-2.1.4.1: Product: ROCCAT Kone Pure Ultra
+[  466.337695] usb 3-2.1.4.1: Manufacturer: ROCCAT
+[  466.540073] input: ROCCAT ROCCAT Kone Pure Ultra as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.0/0003:1E7D:2DD2.000C/input/input36
+[  466.540613] hid-generic 0003:1E7D:2DD2.000C: input,hidraw2: USB HID v1.11 Mouse [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input0
+[  466.544964] hid-generic 0003:1E7D:2DD2.000D: hiddev1,hidraw3: USB HID v1.11 Device [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input1
+[  466.550297] input: ROCCAT ROCCAT Kone Pure Ultra Keyboard as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000E/input/input37
+[  466.608784] input: ROCCAT ROCCAT Kone Pure Ultra Mouse as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000E/input/input38
+[  466.609186] input: ROCCAT ROCCAT Kone Pure Ultra as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000E/input/input39
+[  466.609404] input: ROCCAT ROCCAT Kone Pure Ultra Wireless Radio Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.1/3-2.1.4.1:1.2/0003:1E7D:2DD2.000E/input/input40
+[  466.609941] hid-generic 0003:1E7D:2DD2.000E: input,hiddev2,hidraw4: USB HID v1.11 Keyboard [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input2
+[  466.613941] hid-generic 0003:1E7D:2DD2.000F: hiddev3,hidraw5: USB HID v1.11 Device [ROCCAT ROCCAT Kone Pure Ultra] on usb-0000:06:00.4-2.1.4.1/input3
+[  466.836464] usb 3-2.1.4.4: new full-speed USB device number 13 using xhci_hcd
+[  467.114624] usb 3-2.1.4.4: New USB device found, idVendor=046d, idProduct=0aaa, bcdDevice= 0.31
+[  467.114636] usb 3-2.1.4.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  467.114640] usb 3-2.1.4.4: Product: PRO X
+[  467.114643] usb 3-2.1.4.4: Manufacturer: Logitech
+[  467.114645] usb 3-2.1.4.4: SerialNumber: 000000000000
+[  467.788609] input: Logitech PRO X Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.4/3-2.1.4.4:1.3/0003:046D:0AAA.0010/input/input41
+[  467.848792] input: Logitech PRO X as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.4/3-2.1.4.4:1.3/0003:046D:0AAA.0010/input/input42
+[  467.849341] hid-generic 0003:046D:0AAA.0010: input,hiddev4,hidraw6: USB HID v1.11 Device [Logitech PRO X] on usb-0000:06:00.4-2.1.4.4/input3
+[  468.072343] usb 3-2.1.4.3: new low-speed USB device number 14 using xhci_hcd
+[  468.295358] usb 3-2.1.4.3: New USB device found, idVendor=20a0, idProduct=422d, bcdDevice= 1.05
+[  468.295370] usb 3-2.1.4.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  468.295375] usb 3-2.1.4.3: Product: ps2avrGB
+[  468.295378] usb 3-2.1.4.3: Manufacturer: winkeyless.kr
+[  468.402224] input: winkeyless.kr ps2avrGB as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.0/0003:20A0:422D.0011/input/input45
+[  468.460871] hid-generic 0003:20A0:422D.0011: input,hidraw7: USB HID v1.01 Keyboard [winkeyless.kr ps2avrGB] on usb-0000:06:00.4-2.1.4.3/input0
+[  468.529850] input: winkeyless.kr ps2avrGB System Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.1/0003:20A0:422D.0012/input/input46
+[  468.588640] input: winkeyless.kr ps2avrGB Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.1/0003:20A0:422D.0012/input/input47
+[  468.589120] hid-generic 0003:20A0:422D.0012: input,hiddev5,hidraw8: USB HID v1.01 Device [winkeyless.kr ps2avrGB] on usb-0000:06:00.4-2.1.4.3/input1
+[ 1418.105498] usb 7-1.1: new full-speed USB device number 4 using xhci_hcd
+[ 1418.288327] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 1418.288336] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 1418.288340] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 1418.288343] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 1418.362428] usbcore: registered new interface driver cdc_acm
+[ 1601.512019] usb 3-2.1.4-port3: disabled by hub (EMI?), re-enabling...
+[ 1601.512632] usb 3-2.1.4.3: USB disconnect, device number 14
+[ 1602.340741] usb 3-2.1.4.3: new low-speed USB device number 15 using xhci_hcd
+[ 1602.565050] usb 3-2.1.4.3: New USB device found, idVendor=20a0, idProduct=422d, bcdDevice= 1.05
+[ 1602.565061] usb 3-2.1.4.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 1602.565065] usb 3-2.1.4.3: Product: ps2avrGB
+[ 1602.565068] usb 3-2.1.4.3: Manufacturer: winkeyless.kr
+[ 1602.641813] input: winkeyless.kr ps2avrGB as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.0/0003:20A0:422D.0013/input/input52
+[ 1602.701260] hid-generic 0003:20A0:422D.0013: input,hidraw7: USB HID v1.01 Keyboard [winkeyless.kr ps2avrGB] on usb-0000:06:00.4-2.1.4.3/input0
+[ 1602.771907] input: winkeyless.kr ps2avrGB System Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.1/0003:20A0:422D.0014/input/input53
+[ 1602.828703] input: winkeyless.kr ps2avrGB Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.1/0003:20A0:422D.0014/input/input54
+[ 1602.829119] hid-generic 0003:20A0:422D.0014: input,hiddev5,hidraw8: USB HID v1.01 Device [winkeyless.kr ps2avrGB] on usb-0000:06:00.4-2.1.4.3/input1
+[ 1603.303845] usb 3-2.1.4-port3: disabled by hub (EMI?), re-enabling...
+[ 1603.304113] usb 3-2.1.4.3: USB disconnect, device number 15
+[ 1603.876780] usb 3-2.1.4.3: new low-speed USB device number 16 using xhci_hcd
+[ 1604.107449] usb 3-2.1.4.3: New USB device found, idVendor=20a0, idProduct=422d, bcdDevice= 1.05
+[ 1604.107459] usb 3-2.1.4.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 1604.107463] usb 3-2.1.4.3: Product: ps2avrGB
+[ 1604.107466] usb 3-2.1.4.3: Manufacturer: winkeyless.kr
+[ 1604.208413] input: winkeyless.kr ps2avrGB as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.0/0003:20A0:422D.0015/input/input55
+[ 1604.268898] hid-generic 0003:20A0:422D.0015: input,hidraw7: USB HID v1.01 Keyboard [winkeyless.kr ps2avrGB] on usb-0000:06:00.4-2.1.4.3/input0
+[ 1604.346863] input: winkeyless.kr ps2avrGB System Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.1/0003:20A0:422D.0016/input/input56
+[ 1604.405226] input: winkeyless.kr ps2avrGB Consumer Control as /devices/pci0000:00/0000:00:08.1/0000:06:00.4/usb3/3-2/3-2.1/3-2.1.4/3-2.1.4.3/3-2.1.4.3:1.1/0003:20A0:422D.0016/input/input57
+[ 1604.405759] hid-generic 0003:20A0:422D.0016: input,hiddev5,hidraw8: USB HID v1.01 Device [winkeyless.kr ps2avrGB] on usb-0000:06:00.4-2.1.4.3/input1
+[ 1726.009776] usb 7-1: USB disconnect, device number 2
+[ 1726.009791] usb 7-1.1: USB disconnect, device number 4
+[ 1726.009874] usb 7-1: clear tt 1 (9043) error -71
+[ 1726.017080] usb 7-1.2: USB disconnect, device number 3
+[ 1726.359213] usb 8-1: USB disconnect, device number 2
+[ 1729.207221] usb 7-1: new high-speed USB device number 5 using xhci_hcd
+[ 1729.367414] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 1729.367420] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 1729.367423] usb 7-1: Product: USB2.0 Hub             
+[ 1729.367425] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 1729.813066] usb 8-1: new SuperSpeed USB device number 3 using xhci_hcd
+[ 1730.220330] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 1730.220336] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 1730.220339] usb 8-1: Product: USB3.0 Hub             
+[ 1730.220341] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 1730.827251] usb 7-1.1: new full-speed USB device number 6 using xhci_hcd
+[ 1731.008640] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 1731.008645] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 1731.008648] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 1731.008650] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 1731.199309] usb 7-1.2: new high-speed USB device number 7 using xhci_hcd
+[ 1731.349844] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 1731.349849] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 1731.349852] usb 7-1.2: Product: Mass Storage Device
+[ 1731.349854] usb 7-1.2: Manufacturer: Generic
+[ 1731.349855] usb 7-1.2: SerialNumber: 121220160204
+[ 1731.350353] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[ 1731.350582] scsi host0: usb-storage 7-1.2:1.0
+[ 2835.866634] usb 7-1: USB disconnect, device number 5
+[ 2835.866645] usb 7-1.1: USB disconnect, device number 6
+[ 2835.868413] usb 7-1.2: USB disconnect, device number 7
+[ 2836.108974] usb 8-1: USB disconnect, device number 3
+[ 2839.060722] usb 7-1: new high-speed USB device number 8 using xhci_hcd
+[ 2839.213387] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 2839.213396] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 2839.213401] usb 7-1: Product: USB2.0 Hub             
+[ 2839.213404] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 2839.668002] usb 8-1: new SuperSpeed USB device number 4 using xhci_hcd
+[ 2840.074858] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 2840.074868] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 2840.074872] usb 8-1: Product: USB3.0 Hub             
+[ 2840.074875] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 2840.685275] usb 7-1.1: new full-speed USB device number 9 using xhci_hcd
+[ 2840.865221] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 2840.865231] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 2840.865235] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 2840.865238] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 2840.954064] usb 7-1.1: can't set config #1, error -32
+[ 2841.085279] usb 7-1.2: new high-speed USB device number 10 using xhci_hcd
+[ 2841.241133] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 2841.241144] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 2841.241148] usb 7-1.2: Product: Mass Storage Device
+[ 2841.241151] usb 7-1.2: Manufacturer: Generic
+[ 2841.241153] usb 7-1.2: SerialNumber: 121220160204
+[ 2841.241770] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[ 2841.242087] scsi host0: usb-storage 7-1.2:1.0
+[ 2841.887553] usb 9-1: USB disconnect, device number 4
+[ 2843.577018] usb 9-1: new full-speed USB device number 5 using xhci_hcd
+[ 2843.747424] usb 9-1: not running at top speed; connect to a high speed hub
+[ 2843.767397] usb 9-1: New USB device found, idVendor=2109, idProduct=0103, bcdDevice= 6.f5
+[ 2843.767403] usb 9-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 2843.767406] usb 9-1: Product: USB 2.0 BILLBOARD
+[ 2843.767408] usb 9-1: Manufacturer: VLI Inc.
+[ 2843.767409] usb 9-1: SerialNumber: 0000000000000001
+[ 2948.747583] usb 9-1: USB disconnect, device number 5
+[ 2950.427794] usb 9-1: new full-speed USB device number 6 using xhci_hcd
+[ 2950.597375] usb 9-1: not running at top speed; connect to a high speed hub
+[ 2950.616682] usb 9-1: New USB device found, idVendor=2109, idProduct=0103, bcdDevice= 6.f5
+[ 2950.616694] usb 9-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 2950.616698] usb 9-1: Product: USB 2.0 BILLBOARD
+[ 2950.616701] usb 9-1: Manufacturer: VLI Inc.
+[ 2950.616704] usb 9-1: SerialNumber: 0000000000000001
+[ 3066.447955] usb 7-1: USB disconnect, device number 8
+[ 3066.447966] usb 7-1.1: USB disconnect, device number 9
+[ 3066.448423] usb 7-1.2: USB disconnect, device number 10
+[ 3066.688683] usb 8-1: USB disconnect, device number 4
+[ 3070.916678] usb 7-1: new high-speed USB device number 11 using xhci_hcd
+[ 3071.070054] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 3071.070064] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 3071.070067] usb 7-1: Product: USB2.0 Hub             
+[ 3071.070070] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 3071.520200] usb 8-1: new SuperSpeed USB device number 5 using xhci_hcd
+[ 3071.927193] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 3071.927197] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 3071.927199] usb 8-1: Product: USB3.0 Hub             
+[ 3071.927200] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 3072.540835] usb 7-1.1: new full-speed USB device number 12 using xhci_hcd
+[ 3072.721775] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 3072.721786] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 3072.721790] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 3072.721793] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 3072.905172] usb 7-1.2: new high-speed USB device number 13 using xhci_hcd
+[ 3073.060086] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 3073.060096] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 3073.060100] usb 7-1.2: Product: Mass Storage Device
+[ 3073.060103] usb 7-1.2: Manufacturer: Generic
+[ 3073.060105] usb 7-1.2: SerialNumber: 121220160204
+[ 3073.060814] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[ 3073.061090] scsi host0: usb-storage 7-1.2:1.0
+[ 3074.818746] usb 9-1: USB disconnect, device number 6
+[ 3076.496744] usb 9-1: new full-speed USB device number 7 using xhci_hcd
+[ 3076.667421] usb 9-1: not running at top speed; connect to a high speed hub
+[ 3076.687351] usb 9-1: New USB device found, idVendor=2109, idProduct=0103, bcdDevice= 6.f5
+[ 3076.687362] usb 9-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 3076.687366] usb 9-1: Product: USB 2.0 BILLBOARD
+[ 3076.687369] usb 9-1: Manufacturer: VLI Inc.
+[ 3076.687372] usb 9-1: SerialNumber: 0000000000000001
+[ 3184.848919] usb 7-1: USB disconnect, device number 11
+[ 3184.848929] usb 7-1.1: USB disconnect, device number 12
+[ 3184.869102] usb 7-1.2: USB disconnect, device number 13
+[ 3185.111829] usb 8-1: USB disconnect, device number 5
+[ 3188.359823] usb 7-1: new high-speed USB device number 14 using xhci_hcd
+[ 3188.516697] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 3188.516706] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 3188.516710] usb 7-1: Product: USB2.0 Hub             
+[ 3188.516714] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 3188.963398] usb 8-1: new SuperSpeed USB device number 6 using xhci_hcd
+[ 3189.370014] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 3189.370035] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 3189.370041] usb 8-1: Product: USB3.0 Hub             
+[ 3189.370046] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 3189.984236] usb 7-1.1: new full-speed USB device number 15 using xhci_hcd
+[ 3190.165493] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 3190.165508] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 3190.165514] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 3190.165518] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 3190.355840] usb 7-1.2: new high-speed USB device number 16 using xhci_hcd
+[ 3190.514399] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 3190.514406] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 3190.514408] usb 7-1.2: Product: Mass Storage Device
+[ 3190.514410] usb 7-1.2: Manufacturer: Generic
+[ 3190.514412] usb 7-1.2: SerialNumber: 121220160204
+[ 3190.514794] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[ 3190.514951] scsi host0: usb-storage 7-1.2:1.0
+[ 4050.160291] usb 7-1: clear tt 1 (9033) error -71
+[ 4050.160344] usb 7-1: USB disconnect, device number 14
+[ 4050.160348] usb 7-1.1: USB disconnect, device number 15
+[ 4050.184979] usb 7-1.2: USB disconnect, device number 16
+[ 4050.431053] usb 8-1: USB disconnect, device number 6
+[ 4053.515251] usb 7-1: new high-speed USB device number 17 using xhci_hcd
+[ 4053.667915] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 4053.667922] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4053.667925] usb 7-1: Product: USB2.0 Hub             
+[ 4053.667927] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 4054.121967] usb 8-1: new SuperSpeed USB device number 7 using xhci_hcd
+[ 4054.529033] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 4054.529040] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4054.529043] usb 8-1: Product: USB3.0 Hub             
+[ 4054.529045] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 4055.111357] usb 7-1.1: new full-speed USB device number 18 using xhci_hcd
+[ 4060.319860] usb 7-1.1: unable to read config index 0 descriptor/all
+[ 4060.319871] usb 7-1.1: can't read configurations, error -110
+[ 4060.452177] usb 7-1.1: new full-speed USB device number 19 using xhci_hcd
+[ 4065.696616] usb 7-1.1: device descriptor read/all, error -110
+[ 4065.697046] usb 7-1-port1: attempt power cycle
+[ 4067.236648] usb 7-1.1: new full-speed USB device number 20 using xhci_hcd
+[ 4067.291516] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 4067.291527] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 4067.291531] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 4067.291534] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 4067.476667] usb 7-1.2: new high-speed USB device number 21 using xhci_hcd
+[ 4067.632793] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 4067.632804] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 4067.632808] usb 7-1.2: Product: Mass Storage Device
+[ 4067.632811] usb 7-1.2: Manufacturer: Generic
+[ 4067.632813] usb 7-1.2: SerialNumber: 121220160204
+[ 4067.633330] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[ 4067.633740] scsi host0: usb-storage 7-1.2:1.0
+[ 4256.756852] usb 7-1: USB disconnect, device number 17
+[ 4256.756861] usb 7-1.1: USB disconnect, device number 20
+[ 4256.757089] usb 7-1: clear tt 1 (9033) error -71
+[ 4256.784693] usb 7-1.2: USB disconnect, device number 21
+[ 4257.159645] usb 8-1: USB disconnect, device number 7
+[ 4642.917177] usb 7-1: new high-speed USB device number 22 using xhci_hcd
+[ 4643.075372] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 4643.075382] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4643.075386] usb 7-1: Product: USB2.0 Hub             
+[ 4643.075389] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 4643.519873] usb 8-1: new SuperSpeed USB device number 8 using xhci_hcd
+[ 4643.926927] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 4643.926936] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4643.926940] usb 8-1: Product: USB3.0 Hub             
+[ 4643.926943] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 4644.521284] usb 7-1.1: new full-speed USB device number 23 using xhci_hcd
+[ 4644.704098] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 4644.704106] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 4644.704109] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 4644.704111] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 4644.877299] usb 7-1.2: new high-speed USB device number 24 using xhci_hcd
+[ 4645.028074] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 4645.028084] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 4645.028088] usb 7-1.2: Product: Mass Storage Device
+[ 4645.028091] usb 7-1.2: Manufacturer: Generic
+[ 4645.028093] usb 7-1.2: SerialNumber: 121220160204
+[ 4645.028749] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[ 4645.029414] scsi host0: usb-storage 7-1.2:1.0
+[ 4709.196453] usb 7-1: clear tt 1 (9033) error -71
+[ 4709.196803] usb 7-1: clear tt 1 (9033) error -71
+[ 4709.197175] usb 7-1: clear tt 1 (9033) error -71
+[ 4709.197550] usb 7-1: clear tt 1 (9033) error -71
+[ 4709.197925] usb 7-1: clear tt 1 (9033) error -71
+[ 4709.198132] usb 7-1: USB disconnect, device number 22
+[ 4709.198135] usb 7-1.1: USB disconnect, device number 23
+[ 4709.198315] usb 7-1: clear tt 1 (9033) error -71
+[ 4709.222352] usb 7-1.2: USB disconnect, device number 24
+[ 4709.463910] usb 8-1: USB disconnect, device number 8
+[ 4712.211988] usb 7-1: new high-speed USB device number 25 using xhci_hcd
+[ 4712.364240] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 4712.364242] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4712.364243] usb 7-1: Product: USB2.0 Hub             
+[ 4712.364244] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 4712.813702] usb 8-1: new SuperSpeed USB device number 9 using xhci_hcd
+[ 4713.220982] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 4713.220993] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4713.220997] usb 8-1: Product: USB3.0 Hub             
+[ 4713.221000] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 4713.840089] usb 7-1.1: new full-speed USB device number 26 using xhci_hcd
+[ 4719.040547] usb 7-1.1: unable to read config index 0 descriptor/start: -110
+[ 4719.040560] usb 7-1.1: can't read configurations, error -110
+[ 4719.172321] usb 7-1.1: new full-speed USB device number 27 using xhci_hcd
+[ 4719.353754] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 4719.353766] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 4719.353770] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 4719.353773] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 4719.544331] usb 7-1.2: new high-speed USB device number 28 using xhci_hcd
+[ 4719.698878] usb 7-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 4719.698888] usb 7-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 4719.698892] usb 7-1.2: Product: Mass Storage Device
+[ 4719.698895] usb 7-1.2: Manufacturer: Generic
+[ 4719.698897] usb 7-1.2: SerialNumber: 121220160204
+[ 4719.699425] usb-storage 7-1.2:1.0: USB Mass Storage device detected
+[ 4719.699662] scsi host0: usb-storage 7-1.2:1.0
+[ 4765.986022] usb 7-1: USB disconnect, device number 25
+[ 4765.986031] usb 7-1.1: USB disconnect, device number 27
+[ 4765.986232] usb 7-1: clear tt 1 (1034) error -71
+[ 4766.004373] usb 7-1.2: USB disconnect, device number 28
+[ 4766.374215] usb 8-1: USB disconnect, device number 9
+[ 4768.682522] usb 4-1: new SuperSpeed USB device number 8 using xhci_hcd
+[ 4768.704920] usb 4-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 4768.704925] usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4768.704928] usb 4-1: Product: USB3.0 Hub             
+[ 4768.704930] usb 4-1: Manufacturer: VIA Labs, Inc.         
+[ 4768.830621] usb 3-1: new high-speed USB device number 17 using xhci_hcd
+[ 4768.989771] usb 3-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 4768.989777] usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 4768.989780] usb 3-1: Product: USB2.0 Hub             
+[ 4768.989782] usb 3-1: Manufacturer: VIA Labs, Inc.         
+[ 4770.442345] usb 3-1.1: new full-speed USB device number 18 using xhci_hcd
+[ 4770.618210] usb 3-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 4770.618216] usb 3-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 4770.618219] usb 3-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 4770.618221] usb 3-1.1: SerialNumber: 950323035373513001B0
+[ 4770.798367] usb 3-1.2: new high-speed USB device number 19 using xhci_hcd
+[ 4770.948948] usb 3-1.2: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 4770.948955] usb 3-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 4770.948958] usb 3-1.2: Product: Mass Storage Device
+[ 4770.948960] usb 3-1.2: Manufacturer: Generic
+[ 4770.948961] usb 3-1.2: SerialNumber: 121220160204
+[ 4770.949584] usb-storage 3-1.2:1.0: USB Mass Storage device detected
+[ 4770.949773] scsi host0: usb-storage 3-1.2:1.0
+[ 4796.627677] usb 3-1.1: USB disconnect, device number 18
+[ 4797.929068] usb 3-1.2: USB disconnect, device number 19
+[ 4800.363518] usb 3-1.1: new high-speed USB device number 20 using xhci_hcd
+[ 4800.514564] usb 3-1.1: New USB device found, idVendor=14cd, idProduct=1212, bcdDevice= 1.00
+[ 4800.514567] usb 3-1.1: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[ 4800.514568] usb 3-1.1: Product: Mass Storage Device
+[ 4800.514569] usb 3-1.1: Manufacturer: Generic
+[ 4800.514570] usb 3-1.1: SerialNumber: 121220160204
+[ 4800.515331] usb-storage 3-1.1:1.0: USB Mass Storage device detected
+[ 4800.515548] scsi host0: usb-storage 3-1.1:1.0
+[ 4821.993852] usb 3-1.1: USB disconnect, device number 20
+[ 4829.381097] usb 3-1.1: new full-speed USB device number 21 using xhci_hcd
+[ 4829.556203] usb 3-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 4829.556211] usb 3-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 4829.556216] usb 3-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 4829.556219] usb 3-1.1: SerialNumber: 950323035373513001B0
+[ 5030.419436] usb 3-1: USB disconnect, device number 17
+[ 5030.419445] usb 3-1.1: USB disconnect, device number 21
+[ 5030.419662] usb 3-1: clear tt 1 (90d3) error -71
+[ 5030.716539] usb 4-1: USB disconnect, device number 8
+[ 5033.972667] usb 7-1: new high-speed USB device number 29 using xhci_hcd
+[ 5034.124858] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 5034.124864] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 5034.124867] usb 7-1: Product: USB2.0 Hub             
+[ 5034.124869] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 5034.574485] usb 8-1: new SuperSpeed USB device number 10 using xhci_hcd
+[ 5034.667366] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 5034.667375] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 5034.667378] usb 8-1: Product: USB3.0 Hub             
+[ 5034.667381] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 5035.252725] usb 7-1.1: new full-speed USB device number 30 using xhci_hcd
+[ 5035.433867] usb 7-1.1: New USB device found, idVendor=2341, idProduct=0043, bcdDevice= 0.01
+[ 5035.433875] usb 7-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=220
+[ 5035.433879] usb 7-1.1: Manufacturer: Arduino (www.arduino.cc)
+[ 5035.433881] usb 7-1.1: SerialNumber: 950323035373513001B0
+[ 5310.589458] usb 7-1: USB disconnect, device number 29
+[ 5310.589469] usb 7-1.1: USB disconnect, device number 30
+[ 5310.890481] usb 8-1: USB disconnect, device number 10
+[ 5840.841168] usb 3-2.3: new full-speed USB device number 22 using xhci_hcd
+[ 5840.958581] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 5840.958590] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 5840.958594] usb 3-2.3: Product: USB Serial
+[ 5841.029906] usbcore: registered new interface driver usbserial_generic
+[ 5841.029914] usbserial: USB Serial support registered for generic
+[ 5841.030830] usbcore: registered new interface driver ch341
+[ 5841.030836] usbserial: USB Serial support registered for ch341-uart
+[ 5841.043658] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 5841.594586] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 5988.330667] usb 3-2.3: USB disconnect, device number 22
+[ 5988.632758] usb 3-2.3: new full-speed USB device number 23 using xhci_hcd
+[ 5988.746678] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 5988.746687] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 5988.746692] usb 3-2.3: Product: USB Serial
+[ 5988.823870] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 5988.995676] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 6071.274720] usb 3-2.3: USB disconnect, device number 23
+[ 6214.087919] usb 3-2.3: new full-speed USB device number 24 using xhci_hcd
+[ 6214.205812] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 6214.205819] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 6214.205822] usb 3-2.3: Product: USB Serial
+[ 6214.263977] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 6214.827843] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 6773.739033] usb 3-2.3: USB disconnect, device number 24
+[ 6773.997086] usb 3-2.3: new full-speed USB device number 25 using xhci_hcd
+[ 6774.111476] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 6774.111486] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 6774.111490] usb 3-2.3: Product: USB Serial
+[ 6774.168321] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 6774.310187] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 6792.427075] usb 3-2.3: USB disconnect, device number 25
+[ 6848.975415] usb 3-2.3: new full-speed USB device number 26 using xhci_hcd
+[ 6849.090218] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 6849.090227] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 6849.090230] usb 3-2.3: Product: USB Serial
+[ 6849.145316] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 6849.707220] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 6905.579115] usb 3-2.3: USB disconnect, device number 26
+[ 7254.989986] usb 3-2.3: new full-speed USB device number 27 using xhci_hcd
+[ 7255.111515] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 7255.111525] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 7255.111529] usb 3-2.3: Product: USB Serial
+[ 7255.160689] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 7255.760476] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 7297.260285] usb 3-2.3: USB disconnect, device number 27
+[ 7299.274263] usb 3-2.3: new full-speed USB device number 28 using xhci_hcd
+[ 7299.387637] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 7299.387648] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 7299.387652] usb 3-2.3: Product: USB Serial
+[ 7299.449250] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 7300.028504] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 7317.227928] usb 3-2.3: USB disconnect, device number 28
+[ 7320.780052] usb 3-2.3: new full-speed USB device number 29 using xhci_hcd
+[ 7320.893602] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 7320.893610] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 7320.893614] usb 3-2.3: Product: USB Serial
+[ 7320.952788] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 7321.533514] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 7370.220057] usb 3-2.3: USB disconnect, device number 29
+[ 7399.497577] usb 7-1: new high-speed USB device number 31 using xhci_hcd
+[ 7399.652028] usb 7-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 3.b4
+[ 7399.652038] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 7399.652042] usb 7-1: Product: USB2.0 Hub             
+[ 7399.652045] usb 7-1: Manufacturer: VIA Labs, Inc.         
+[ 7399.791183] usb 8-1: new SuperSpeed USB device number 11 using xhci_hcd
+[ 7399.884178] usb 8-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 3.b4
+[ 7399.884188] usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 7399.884192] usb 8-1: Product: USB3.0 Hub             
+[ 7399.884194] usb 8-1: Manufacturer: VIA Labs, Inc.         
+[ 7507.453062] usb 7-1: USB disconnect, device number 31
+[ 7507.588930] usb 8-1: USB disconnect, device number 11
+[ 7630.538475] usb 3-2.3: new full-speed USB device number 30 using xhci_hcd
+[ 7630.652232] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 7630.652243] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 7630.652248] usb 3-2.3: Product: USB Serial
+[ 7630.713394] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 7631.301735] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 7747.565338] usb 3-2.3: USB disconnect, device number 30
+[ 7772.623627] usb 3-2.3: new full-speed USB device number 31 using xhci_hcd
+[ 7772.737882] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 7772.737892] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 7772.737896] usb 3-2.3: Product: USB Serial
+[ 7772.793486] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 7773.372845] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
+[ 8130.027877] usb 3-2.3: USB disconnect, device number 31
+[ 8806.857152] usb 3-2.3: new full-speed USB device number 32 using xhci_hcd
+[ 8806.970466] usb 3-2.3: New USB device found, idVendor=1a86, idProduct=7523, bcdDevice= 2.64
+[ 8806.970473] usb 3-2.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[ 8806.970476] usb 3-2.3: Product: USB Serial
+[ 8807.033610] usb 3-2.3: ch341-uart converter now attached to ttyUSB0
+[ 8807.617472] usb 3-2.3: usbfs: interface 0 claimed by ch341 while 'brltty' sets config #1
