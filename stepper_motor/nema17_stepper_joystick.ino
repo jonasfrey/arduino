@@ -135,10 +135,11 @@ struct O_nema_stepper o_nema_stepper;
 void setup()
 {
 
+  Serial.begin(9600);
   f_init_o_nema_stepper(
       &o_nema_stepper,
-      11, // pin step
-      12  // pin direction
+      6, // pin step
+      7  // pin direction
   );
   f_update_speed_normalized_o_nema_stepper(
     &o_nema_stepper, 
@@ -180,6 +181,8 @@ void loop()
 
   int n_x = analogRead(n_pin_ain_potentiometer_x);
   int n_y = analogRead(n_pin_ain_potentiometer_y);
+  Serial.println(n_x);
+  Serial.println(n_y);
   double n_x_nor = (((float)n_x / 1024.0) - .5) * 2.;
   double n_y_nor = (((float)n_y / 1024.0) - .5) * 2.;
   double n_speed_nor_x = abs(n_x_nor);
@@ -192,7 +195,10 @@ void loop()
   {
     n_speed_nor_y = 0.;
   }
-
-  o_nema_stepper.b_direction_forward = 0.;
+  f_update_speed_normalized_o_nema_stepper(
+    &o_nema_stepper, 
+    n_speed_nor_x
+  );
+  o_nema_stepper.b_direction_forward = (n_x_nor > 0.);
   f_update_o_nema_stepper(&o_nema_stepper);
 }

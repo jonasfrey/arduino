@@ -22,33 +22,36 @@
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
 
-int n_pin_step = 12;
-int n_pin_dir = 11;
 // the setup function runs once when you press reset or power the board
-void setup()
-{
-    // initialize digital pin LED_BUILTIN as an output.
-    // Serial.begin(115200); // stepper wont work after using Serial.begin ... wtf is going on
-    pinMode(n_pin_step, OUTPUT);
-    pinMode(n_pin_dir, OUTPUT);
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+    for(int n = 0; n<14; n+=1){
+
+        pinMode(n, OUTPUT);
+
+    }
+    for(int n = 0; n<14; n+=1){
+
+        digitalWrite(n, 1);
+
+    }
 }
 
 // the loop function runs over and over again forever
-int n_i = 0;
-void loop()
-{
-    n_i+=1;
-    
-    digitalWrite(n_pin_dir, (n_i%2)); // turn the LED on (HIGH is the voltage level)
+void loop() {
 
-    for (int n = 0; n < 200; n += 1)
-    {
-        digitalWrite(n_pin_step, 1); // turn the LED on (HIGH is the voltage level)
-        delayMicroseconds(300);              // wait for a second
-        digitalWrite(n_pin_step, 0);  // turn the LED off by making the voltage LOW
-        delayMicroseconds(300);              // wait for a second
+
+    for(int n = 0; n<14; n+=1){
+
+        digitalWrite(n, 1);
+
     }
+    delay(1000);
+    for(int n = 0; n<14; n+=1){
 
+        digitalWrite(n, 0);
 
-    delay(1000); // wait for a second
+    }
+    delay(1000);
+
 }
