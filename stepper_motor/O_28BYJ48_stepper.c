@@ -36,12 +36,67 @@
       double n_steps_per_revolution;
       int n_idx_active_a_n_pin; 
       double b_direction_forward; 
-      long n_t_mic_sec_stepper;
-      long n_t_mic_sec_stepper__last;
-      long n_t_mic_sec_stepper__diff;
-      double n_t_mic_sec_stepper__diff_thresh;
+      long n_ts_mics__step;
+      long n_ts_mics__step__last;
+      long n_steps_done_forward;
+      long n_steps_done_backward;
 
     };
+
+    void f_setup_pinMode_o_byj48_stepper(
+      O_byj48_stepper * o_byj48_stepper
+    ){
+      for(int n_i = 0;n_i< o_byj48_stepper->n_len_a_n_pin; n_i+=1){
+            pinMode(o_byj48_stepper->a_n_pin[n_i], OUTPUT);
+      }
+    }
+        void f_write_step_o_byj48_stepper(
+      O_byj48_stepper * o_byj48_stepper
+    ){
+        o_byj48_stepper->n_ts_mics__step__last = micros();
+      if(o_byj48_stepper->b_direction_forward){
+        o_byj48_stepper->n_idx_active_a_n_pin = 
+          (o_byj48_stepper->n_idx_active_a_n_pin+1) % o_byj48_stepper->n_len_a_n_pin;
+        o_byj48_stepper->n_steps_done_forward +=1;
+      }else{
+        o_byj48_stepper->n_idx_active_a_n_pin = 
+          o_byj48_stepper->n_idx_active_a_n_pin -1;
+        if(o_byj48_stepper->n_idx_active_a_n_pin < 0){
+          o_byj48_stepper->n_idx_active_a_n_pin = (o_byj48_stepper->n_len_a_n_pin-1);
+        }
+        o_byj48_stepper->n_steps_done_backward +=1;
+      }
+
+      for(int n_i = 0;n_i< o_byj48_stepper->n_len_a_n_pin; n_i+=1){
+            int b = n_i == o_byj48_stepper->n_idx_active_a_n_pin; 
+            digitalWrite(o_byj48_stepper->a_n_pin[n_i], b);
+      }
+
+    }
+    void f_update_o_byj48_stepper(
+      O_byj48_stepper * o_byj48_stepper
+    ){
+
+     long n_ts_mics__step__diff = micros() - o_byj48_stepper->n_ts_mics__step__last; 
+
+      if(n_ts_mics__step__diff >= o_byj48_stepper->n_microseconds_delay_between_step){
+        o_byj48_stepper->n_ts_mics__step = 0;
+        if(o_byj48_stepper->n_rpm > 0.){
+          f_write_step_o_byj48_stepper(o_byj48_stepper);
+        }
+      }
+    }
+    void f_update_o_byj48_stepper__n_steps(
+      O_byj48_stepper * o_byj48_stepper, 
+      unsigned int n_steps
+    ){
+      if(o_byj48_stepper->n_rpm > 0.){
+        for(unsigned int n = 0; n<n_steps;n+=1){
+            delayMicroseconds(o_byj48_stepper->n_microseconds_delay_between_step);
+            f_update_o_byj48_stepper(o_byj48_stepper);
+        }
+      }
+    }
 
     void f_init_o_byj48_stepper(
       O_byj48_stepper * o_byj48_stepper, 
@@ -85,43 +140,16 @@
 
       o_byj48_stepper->b_direction_forward = 1;
 
-      o_byj48_stepper->n_t_mic_sec_stepper = 0;
-      o_byj48_stepper->n_t_mic_sec_stepper__last = 0;
-      o_byj48_stepper->n_t_mic_sec_stepper__diff = 0;
-      o_byj48_stepper->n_t_mic_sec_stepper__diff_thresh = 0.0;
+      o_byj48_stepper->n_ts_mics__step = 0;
+      o_byj48_stepper->n_ts_mics__step__last = 0;
+      o_byj48_stepper->n_steps_done_forward = 0;
+      o_byj48_stepper->n_steps_done_backward = 0;
 
       o_byj48_stepper->n_idx_active_a_n_pin = 0;
 
       f_setup_pinMode_o_byj48_stepper(o_byj48_stepper);
 
     }
-
-    void f_setup_pinMode_o_byj48_stepper(
-      O_byj48_stepper * o_byj48_stepper
-    ){
-      for(int n_i = 0;n_i< o_byj48_stepper->n_len_a_n_pin; n_i+=1){
-            pinMode(o_byj48_stepper->a_n_pin[n_i], OUTPUT);
-      }
-    }
-
-    void f_update_speed_normalized_o_byj48_stepper(
-      double n_speed_nor, 
-      O_byj48_stepper * o_byj48_stepper
-    ){
-      double * n_ptr_n ;
-      double n_speed_normalized_fract = abs(modf(n_speed_nor, n_ptr_n));
-
-      double n_rpm = n_speed_normalized_fract * (
-        o_byj48_stepper->n_rpm_max 
-        - o_byj48_stepper->n_rpm_min
-      ) + o_byj48_stepper->n_rpm_min;
-
-      f_update_o_byj48_stepper(
-        o_byj48_stepper, 
-        n_rpm
-      );
-    };
-
     void f_update_rpm_o_byj48_stepper(
       O_byj48_stepper * o_byj48_stepper, 
       double n_rpm
@@ -153,46 +181,79 @@
       }
     }
 
-
-
-
-
-    
-
-
-
-    void f_update_o_byj48_stepper(
-      O_byj48_stepper * o_byj48_stepper, 
-      long n_mic_secs_delay
-    ){
-      o_byj48_stepper->n_t_mic_sec_stepper += n_mic_secs_delay; 
-
-      if(o_byj48_stepper->n_t_mic_sec_stepper > o_byj48_stepper->n_microseconds_delay_between_step){
-        o_byj48_stepper->n_t_mic_sec_stepper = 0;
-        if(o_byj48_stepper->n_rpm > 0.){
-          f_write_step_o_byj48_stepper(o_byj48_stepper);
-        }
-      }
-    }
-
-    void f_write_step_o_byj48_stepper(
+    void f_update_speed_normalized_o_byj48_stepper(
+      double n_speed_nor, 
       O_byj48_stepper * o_byj48_stepper
     ){
-      if(o_byj48_stepper->b_direction_forward){
-        o_byj48_stepper->n_idx_active_a_n_pin = 
-          (o_byj48_stepper->n_idx_active_a_n_pin+1) % o_byj48_stepper->n_len_a_n_pin;
-      }else{
-        o_byj48_stepper->n_idx_active_a_n_pin = 
-          o_byj48_stepper->n_idx_active_a_n_pin -1;
-        if(o_byj48_stepper->n_idx_active_a_n_pin < 0){
-          o_byj48_stepper->n_idx_active_a_n_pin = (o_byj48_stepper->n_len_a_n_pin-1);
-        }
-      }
+      double * n_ptr_n ;
+      double n_speed_normalized_fract = abs(modf(n_speed_nor, n_ptr_n));
+
+      double n_rpm = n_speed_normalized_fract * (
+        o_byj48_stepper->n_rpm_max 
+        - o_byj48_stepper->n_rpm_min
+      ) + o_byj48_stepper->n_rpm_min;
+
+      f_update_rpm_o_byj48_stepper(
+        o_byj48_stepper, 
+        n_rpm
+      );
+    };
 
 
 
-      for(int n_i = 0;n_i< o_byj48_stepper->n_len_a_n_pin; n_i+=1){
-            int b = n_i == o_byj48_stepper->n_idx_active_a_n_pin; 
-            digitalWrite(o_byj48_stepper->a_n_pin[n_i], b);
-      }
-    }
+
+
+
+//usage / example
+
+// struct O_byj48_stepper o_byj48_stepper__1; //initialize stepper
+
+
+//     void setup() {
+
+//       f_init_o_byj48_stepper( //initialize stepper
+//         &o_byj48_stepper__1,
+//         2,//pin1
+//         3,//pin2
+//         4,//pin3
+//         5//pin4
+//       );
+
+//       f_update_rpm_o_byj48_stepper( //set the rpm of the stepper
+//         &o_byj48_stepper__1, 
+//         11
+//       );
+//       o_byj48_stepper__1.b_direction_forward = 0; // set the direction
+//       Serial.begin(9600);
+//     }
+
+//   int n = 0;
+//     void loop() {
+//       n+=1;
+//       f_update_o_byj48_stepper( // update the stepper, (it will automatically step according to its speed) 
+//         &o_byj48_stepper__1
+//         );
+
+//         // delayMicroseconds(n_t_mic_sec_delay);
+      
+//       if(n>1000){ //example of stepping manually
+//         delay(1000);
+//         o_byj48_stepper__1.b_direction_forward = 0;
+//         f_update_o_byj48_stepper__n_steps(
+//           &o_byj48_stepper__1, 
+//           o_byj48_stepper__1.n_steps_per_revolution // this will step 1 full rotation 
+//         );
+        
+//         o_byj48_stepper__1.b_direction_forward = 1; // set direction to backward
+//         f_update_o_byj48_stepper__n_steps(
+//           &o_byj48_stepper__1, 
+//           o_byj48_stepper__1.n_steps_per_revolution // this will step 1 full rotation ( now backward since we set the direction to vbackward)
+//         );
+//         delay(1000);
+//       }
+//     }
+
+
+
+
+
